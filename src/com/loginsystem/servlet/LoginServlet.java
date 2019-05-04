@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		//首先设置编码格式
-		resp.setContentType("charset=utf8");
+		resp.setContentType("text/html;charset=utf8");
 		//获取用户数据
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
@@ -32,6 +32,11 @@ public class LoginServlet extends HttpServlet {
 			User user = loginservice.checkUserService(username, password);
 //			System.out.println(user);
 		//根据判断结果再进行跳转
+			if( user!=null ){
+				resp.getWriter().write("登录成功");
+			}else{
+				resp.getWriter().write("登录失败");
+			}
 		
 	}
 	
