@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.loginsystem.entity.User;
 import com.loginsystem.service.LoginService;
@@ -33,7 +34,12 @@ public class LoginServlet extends HttpServlet {
 //			System.out.println(user);
 		//根据判断结果再进行跳转
 			if( user!=null ){
-				resp.getWriter().write("登录成功");
+				
+				//使用Session存储登录后的用户信息
+				HttpSession session = req.getSession();
+				session.setAttribute("user", user);
+				
+				resp.sendRedirect("MainFunctionServlet");
 			}else{
 				resp.getWriter().write("登录失败");
 			}
