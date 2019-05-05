@@ -41,7 +41,9 @@ public class LoginServlet extends HttpServlet {
 				
 				resp.sendRedirect("MainFunctionServlet");
 			}else{
-				resp.getWriter().write("登录失败");
+				System.out.println("准备跳转另一个页面");
+				req.setAttribute("information", "wrong");//加入用户名或者密码错误的识别信息
+				req.getRequestDispatcher("PageServlet").forward(req, resp);
 			}
 		
 	}

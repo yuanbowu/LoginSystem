@@ -18,13 +18,13 @@ public class MainFunctionServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		resp.setContentType("text/html;charset=utf-8");
+//		resp.setContentType("text/html;charset=utf-8");
 		User user = (User) req.getSession().getAttribute("user");
 		
 		
-		resp.getWriter().write(user.getUsername());
+//		resp.getWriter().write(user.getUsername());
 		
-//		req.getRequestDispatcher("../mainfunction.html").forward(req, resp);
+		req.getRequestDispatcher("../MainFunctionPage.jsp").forward(req, resp);
 	}
 
 }
