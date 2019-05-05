@@ -9,5 +9,7 @@
 	项目虚拟地址/index
 	例如测试时项目入口为“http://localhost:8080/LoginSystem/index"(使用时可以此为例）
 
+该项目大约有4M，同时又使用GitHub所以clone可能会比较慢
+
 本系统开发IDE：MyEclipse 2017 CI
 服务器：Tomcat 9.0
