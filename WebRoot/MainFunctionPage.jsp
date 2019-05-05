@@ -37,9 +37,14 @@
 		</style>
 	</head>
 	<body class="text-center">
+	<script type="text/javascript">
+		function jumpLogout(){
+			window.location.href="LoginoutServlet";
+		}
+	</script>
 		<nav class="navbar navbar-default buttonposition  " role="navigation">
 			<div class="navbar-header ">
-				<button class="btn btn-primary buttonposition " >注销</button>
+				<button class="btn btn-primary buttonposition " type = "button" onclick="jumpLogout()" >注销</button>
 			</div>
 		</nav>
 		<div class="container ">

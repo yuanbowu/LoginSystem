@@ -25,6 +25,13 @@
     <description>This is the description of my J2EE component</description>
     <servlet-class>com.loginsystem.servlet.MainFunctionServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>LoginoutServlet</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>com.loginsystem.servlet.LoginoutServlet</servlet-class>
+  </servlet>
+
 
 
 
@@ -44,6 +51,10 @@
   <servlet-mapping>
     <servlet-name>MainFunctionServlet</servlet-name>
     <url-pattern>/servlet/MainFunctionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginoutServlet</servlet-name>
+    <url-pattern>/servlet/LoginoutServlet</url-pattern>
   </servlet-mapping>
 
 </web-app>
