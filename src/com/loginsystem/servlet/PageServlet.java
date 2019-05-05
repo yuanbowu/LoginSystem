@@ -16,7 +16,7 @@ public class PageServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		req.getRequestDispatcher("../loginpage.html").forward(req, resp);
+		req.getRequestDispatcher("../SignIn.html").forward(req, resp);
 	}
 
 }
