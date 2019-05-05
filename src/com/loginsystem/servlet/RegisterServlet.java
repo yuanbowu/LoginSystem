@@ -31,10 +31,10 @@ public class RegisterServlet extends HttpServlet {
 		int sign = rs.addUserService(username, password);//sign用来标识是否添加成功
 		//响应处理结果
 		if( sign==1 ){
-			System.out.println("successful");
+//			System.out.println("successful");
 			req.getRequestDispatcher("/ForAddSuccessfulJumping.html").forward(req, resp);
 		}else{
-			System.out.println("fail");
+//			System.out.println("fail");
 			req.getRequestDispatcher("RegisterPageServlet").forward(req, resp);
 		}
 		

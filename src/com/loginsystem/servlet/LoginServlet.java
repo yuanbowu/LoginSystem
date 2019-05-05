@@ -27,7 +27,7 @@ public class LoginServlet extends HttpServlet {
 		//获取用户数据
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
-		System.out.println(username+password);
+//		System.out.println(username+password);
 		//处理请求信息
 			//获取对应的业务层对象
 			LoginService loginservice = new LoginServiceImpl();
@@ -42,8 +42,6 @@ public class LoginServlet extends HttpServlet {
 				
 				resp.sendRedirect("MainFunctionServlet");
 			}else{
-//				System.out.println("准备跳转另一个页面");
-//				req.setAttribute("information", "wrong");//加入用户名或者密码错误的识别信息
 				req.getRequestDispatcher("/ForWrongJumping.html").forward(req, resp);
 			}
 		

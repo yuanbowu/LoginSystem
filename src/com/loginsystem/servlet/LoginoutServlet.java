@@ -20,7 +20,7 @@ public class LoginoutServlet extends HttpServlet {
 		//用来强制销毁session
 		HttpSession session = req.getSession();
 		session.invalidate();
-		resp.sendRedirect("PageServlet");
+		resp.sendRedirect("../index");
 		return;
 	}
 

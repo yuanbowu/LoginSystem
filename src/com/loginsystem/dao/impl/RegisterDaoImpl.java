@@ -34,7 +34,8 @@ public class RegisterDaoImpl implements RegisterDao {
 			//获取连接对象
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/loginsystem?serverTimezone=GMT%2B8", "root", "password");
 			//创建SQL语句
-			String sql = "INSERT INTO user (uid,username,password) VALUES (100,?,?) ";
+//			String sql = "INSERT INTO user (username,password) VALUES (?,?) ";
+			String sql = "insert into user (username,password) values (?,?)";
 
 			//创建SQL语句对象
 			ps = conn.prepareStatement(sql);
@@ -42,7 +43,7 @@ public class RegisterDaoImpl implements RegisterDao {
 			ps.setString(1, username);
 			ps.setString(2, password);
 			//执行
-			rs = ps.executeUpdate(sql);
+			rs = ps.executeUpdate();
 					
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

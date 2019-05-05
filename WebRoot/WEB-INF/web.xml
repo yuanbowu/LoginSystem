@@ -73,7 +73,7 @@
 
   <servlet-mapping>
     <servlet-name>PageServlet</servlet-name>
-    <url-pattern>/servlet/PageServlet</url-pattern>
+    <url-pattern>/index</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>

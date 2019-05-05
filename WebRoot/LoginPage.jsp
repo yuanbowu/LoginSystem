@@ -27,19 +27,8 @@
 	</head>
 	<body class="text-center" >
 	<script type="text/javascript">
-		var information = <%=request.getAttribute("information") %>;
-		<% 
-			System.out.println("information="+request.getAttribute("information"));
-			if( request.getAttribute("information")=="wrong" ){
-				%>
-				alert("用户名或密码错误")
-				<%
-			}
-		%>
-	</script>
-	<script type="text/javascript">
 		function jumpRegisterPage(){
-			window.location.href="RegisterPageServlet";
+			window.location.href="servlet/RegisterPageServlet";
 		}
 	</script>
 		<div class="container ">
