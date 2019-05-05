@@ -44,7 +44,7 @@ public class LoginServlet extends HttpServlet {
 			}else{
 //				System.out.println("准备跳转另一个页面");
 //				req.setAttribute("information", "wrong");//加入用户名或者密码错误的识别信息
-				req.getRequestDispatcher("/ForJumping.html").forward(req, resp);
+				req.getRequestDispatcher("/ForWrongJumping.html").forward(req, resp);
 			}
 		
 	}

@@ -2,19 +2,20 @@ package com.loginsystem.service.impl;
 
 import javax.servlet.http.HttpServlet;
 
+import com.loginsystem.dao.RegisterDao;
+import com.loginsystem.dao.impl.RegisterDaoImpl;
 import com.loginsystem.entity.User;
 import com.loginsystem.service.RegisterService;
 
-public class RegisterServiceImpl extends HttpServlet implements RegisterService {
+public class RegisterServiceImpl implements RegisterService {
 
-	public RegisterServiceImpl() {
-		super();
-	}
 
 	@Override
-	public User addUserService(String username, String password) {
+	public int addUserService(String username, String password) {
 		
-		return null;
+		RegisterDao rd = new RegisterDaoImpl();
+		
+		return rd.addUserDao(username, password);
 	}
 	
 	
