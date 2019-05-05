@@ -10,7 +10,7 @@
 		<script src="/LoginSystem/js/bootstrap.js"></script>
 		<script src="/LoginSystem/js/jquery-3.3.1.js"></script>
 		<script src="/LoginSystem/js/bootstrap-switch.js"></script>
-		<title>欢迎注册四则运算</title>
+		<title>欢迎注册</title>
 		<style>
 			html,
 			body {height: 100%;}
