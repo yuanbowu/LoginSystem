@@ -10,7 +10,7 @@
 		<script src="/LoginSystem/js/bootstrap.js"></script>
 		<script src="/LoginSystem/js/jquery-3.3.1.js"></script>
 		<script src="/LoginSystem/js/bootstrap-switch.js"></script>
-		<title>欢迎使用</title>
+		<title>欢迎注册四则运算</title>
 		<style>
 			html,
 			body {height: 100%;}
@@ -26,35 +26,18 @@
 		</style>
 	</head>
 	<body class="text-center" >
-	<script type="text/javascript">
-		var information = <%=request.getAttribute("information") %>;
-		<% 
-			System.out.println("information="+request.getAttribute("information"));
-			if( request.getAttribute("information")=="wrong" ){
-				%>
-				alert("用户名或密码错误")
-				<%
-			}
-		%>
-	</script>
-	<script type="text/javascript">
-		function jumpRegisterPage(){
-			window.location.href="RegisterPageServlet";
-		}
-	</script>
 		<div class="container ">
-			<form role="form" class="form-sign" action ="/LoginSystem/servlet/LoginServlet" method="post" >
-					<h1 class="mb-3 font-weight-normal">用户登录</h1>
+			<form role="form" class="form-sign" action="RegisterServlet" method="post" >
+					<h1 class="mb-3 font-weight-normal">用户注册</h1>
 					<div >
 						<input type="text" class="form-control " 
-						 placeholder="Enter Your Username" required autofocus name="username" />
+						 placeholder="Enter Your Username" required autofocus name = "username" />
 					</div>
 					<div >
 						<input type="password" class="form-control"
-						 placeholder="Enter Your Password" name="password" />
+						 placeholder="Enter Your Password" name = "password" />
 					</div>
-					<button type="submit" class="btn btn-block btn-primary" >登录</button>
-					<button type="button" class="btn btn-block btn-info " onclick="jumpRegisterPage()" >注册</button>
+					<button type="submit" class="btn btn-block btn-info " >注册</button>
 			</form>
 		</div>
 	</body>

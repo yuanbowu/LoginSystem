@@ -31,6 +31,41 @@
     <description>This is the description of my J2EE component</description>
     <servlet-class>com.loginsystem.servlet.LoginoutServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>RegisterPageServlet</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>com.loginsystem.servlet.RegisterPageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>com.loginsystem.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterService</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>com.loginsystem.service.RegisterService</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterServiceImpl</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>com.loginsystem.service.impl.RegisterServiceImpl</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterDaoImpl</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>com.loginsystem.dao.impl.RegisterDaoImpl</servlet-class>
+  </servlet>
+
+
+
+
+
 
 
 
@@ -55,6 +90,26 @@
   <servlet-mapping>
     <servlet-name>LoginoutServlet</servlet-name>
     <url-pattern>/servlet/LoginoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterPageServlet</servlet-name>
+    <url-pattern>/servlet/RegisterPageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/servlet/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterService</servlet-name>
+    <url-pattern>/servlet/RegisterService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServiceImpl</servlet-name>
+    <url-pattern>/servlet/RegisterServiceImpl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterDaoImpl</servlet-name>
+    <url-pattern>/servlet/RegisterDaoImpl</url-pattern>
   </servlet-mapping>
 
 </web-app>
