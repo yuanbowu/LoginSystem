@@ -32,7 +32,7 @@ public class RegisterServlet extends HttpServlet {
 		//响应处理结果
 		if( sign==1 ){
 //			System.out.println("successful");
-			req.getRequestDispatcher("/ForAddSuccessfulJumping.html").forward(req, resp);
+			req.getRequestDispatcher("../ForAddSuccessfulJumping.html").forward(req, resp);
 		}else{
 //			System.out.println("fail");
 			req.getRequestDispatcher("RegisterPageServlet").forward(req, resp);

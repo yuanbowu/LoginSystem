@@ -1,19 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-    
+ 
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%> 
+   
 <%@ page import ="com.loginsystem.entity.*"  %>
   
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<% User user = (User) session.getAttribute("user");  %>
 	<head>
+		<base href="<%=basePath%>">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<link rel="stylesheet" href="/LoginSystem/css/bootstrap.css" />
-		<link rel="stylesheet" href="/LoginSystem/css/bootstrap-switch.css" />
-		<script src="/LoginSystem/js/bootstrap.js"></script>
-		<script src="/LoginSystem/js/jquery-3.3.1.js"></script>
-		<script src="/LoginSystem/js/bootstrap-switch.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/bootstrap-switch.css" />
+		<script src="js/bootstrap.js"></script>
+		<script src="js/jquery-3.3.1.js"></script>
+		<script src="js/bootstrap-switch.js"></script>
 		<script src="js/jquery.pagination.js"></script>
 		<title>登录成功</title>
 		<style>
@@ -39,7 +45,7 @@
 	<body class="text-center">
 	<script type="text/javascript">
 		function jumpLogout(){
-			window.location.href="LoginoutServlet";
+			window.location.href="servlet/LoginoutServlet";
 		}
 	</script>
 		<nav class="navbar navbar-default buttonposition  " role="navigation">

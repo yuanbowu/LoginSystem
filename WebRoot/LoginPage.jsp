@@ -1,15 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
+		<base href="<%=basePath%>">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<link rel="stylesheet" href="/LoginSystem/css/bootstrap.css" />
-		<link rel="stylesheet" href="/LoginSystem/css/bootstrap-switch.css" />
-		<script src="/LoginSystem/js/bootstrap.js"></script>
-		<script src="/LoginSystem/js/jquery-3.3.1.js"></script>
-		<script src="/LoginSystem/js/bootstrap-switch.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/bootstrap-switch.css" />
+		<script src="js/bootstrap.js"></script>
+		<script src="js/jquery-3.3.1.js"></script>
+		<script src="js/bootstrap-switch.js"></script>
 		<title>欢迎使用</title>
 		<style>
 			html,
@@ -32,7 +37,7 @@
 		}
 	</script>
 		<div class="container ">
-			<form role="form" class="form-sign" action ="/LoginSystem/servlet/LoginServlet" method="post" >
+			<form role="form" class="form-sign" action ="servlet/LoginServlet" method="post" >
 					<h1 class="mb-3 font-weight-normal">用户登录</h1>
 					<div >
 						<input type="text" class="form-control " 

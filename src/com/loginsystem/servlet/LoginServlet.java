@@ -42,7 +42,7 @@ public class LoginServlet extends HttpServlet {
 				
 				resp.sendRedirect("MainFunctionServlet");
 			}else{
-				req.getRequestDispatcher("/ForWrongJumping.html").forward(req, resp);
+				req.getRequestDispatcher("../ForWrongJumping.html").forward(req, resp);
 			}
 		
 	}
