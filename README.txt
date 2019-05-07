@@ -13,3 +13,4 @@
 
 本系统开发IDE：MyEclipse 2017 CI
 服务器：Tomcat 9.0
+访问数据库端口为：localhost:8080
